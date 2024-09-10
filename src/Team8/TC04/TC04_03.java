@@ -2,6 +2,7 @@ package Team8.TC04;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -26,6 +27,10 @@ public class TC04_03 extends BaseDriver {
 
         WebElement submit = driver.findElement(By.xpath("//input[@id='lfb']"));
         submit.click();
+        MyFunc.Bekle(2);
+
+        WebElement controlMessage = driver.findElement(By.cssSelector(".alertX > p:nth-child(1)"));
+        Assert.assertEquals("Failed","Şifre doğru değil. Lütfen kontrol edip yeniden deneyin.",controlMessage.getText());
         BekleKapat();
     }
 }

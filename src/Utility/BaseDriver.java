@@ -21,6 +21,5 @@ public class BaseDriver {
         MyFunc.Bekle(3);
         driver.quit();
 
-
     }
 }

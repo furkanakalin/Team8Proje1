@@ -1,4 +1,0 @@
-package Team8.TC04;
-
-public class deneme {
-}

@@ -18,11 +18,11 @@ public class TC04_03 extends BaseDriver {
         MyFunc.Bekle(2);
 
         WebElement email = driver.findElement(By.xpath("//input[@id='life']"));
-        email.sendKeys("technostudyteam8@gmail.com");
+        email.sendKeys("gecerlimail@gmail.com");
         MyFunc.Bekle(2);
 
         WebElement password = driver.findElement(By.xpath("//input[@id='lifp']"));
-        password.sendKeys("gecerlisifre");
+        password.sendKeys("Furkan24");
         MyFunc.Bekle(2);
 
         WebElement submit = driver.findElement(By.xpath("//input[@id='lfb']"));
@@ -30,7 +30,8 @@ public class TC04_03 extends BaseDriver {
         MyFunc.Bekle(2);
 
         WebElement controlMessage = driver.findElement(By.cssSelector(".alertX > p:nth-child(1)"));
-        Assert.assertEquals("Failed", "Şifre doğru değil. Lütfen kontrol edip yeniden deneyin.", controlMessage.getText());
+        Assert.assertEquals("Failed", "Bu e-postaya kayıtlı bir hesap bulunamadı.", controlMessage.getText());
+
         BekleKapat();
     }
 }

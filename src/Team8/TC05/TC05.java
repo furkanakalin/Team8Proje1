@@ -11,23 +11,32 @@ public class TC05 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://akakce.com");
         driver.manage().window().maximize();
-        MyFunc.Bekle(1);
+        MyFunc.Bekle(2);
 
-        WebElement girisYapButton = driver.findElement(By.linkText("Giriş Yap"));
+        WebElement girisYapButton = driver.findElement(By.xpath("//a[@href='/akakcem/giris/']"));
         girisYapButton.click();
-        MyFunc.Bekle(1);
+        MyFunc.Bekle(2);
 
-        WebElement emailGiris= driver.findElement(By.id("life"));
+        WebElement emailGiris= driver.findElement(By.xpath("//input[@id='life']"));
         emailGiris.sendKeys("technostudyteam8@gmail.com");
+        MyFunc.Bekle(2);
 
-        WebElement sifreGiris = driver.findElement(By.id("lifp"));
+        WebElement sifreGiris= driver.findElement(By.xpath("//input[@id='lifp']"));
         sifreGiris.sendKeys("Furkan24");
-        MyFunc.Bekle(1);
 
-        WebElement loginButton = driver.findElement(By.id("lfb"));
+        WebElement loginButton = driver.findElement(By.xpath("//input[@id='lfb']"));
         loginButton.click();
+        MyFunc.Bekle(2);
 
-        MyFunc.Bekle(1);
+        WebElement hesabimButton = driver.findElement(By.cssSelector("#HM_v8 > i:nth-child(1) > a:nth-child(1)"));
+        hesabimButton.click();
+
+        MyFunc.Bekle(2);
+
+        WebElement siparislerimLink = driver.findElement(By.linkText("Siparişlerim"));
+        siparislerimLink.click();
+
+        MyFunc.Bekle(3);
         driver.quit();
     }
 }

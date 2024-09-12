@@ -45,6 +45,11 @@ public class TC01 extends BaseDriver{
             genderMale.click();
             MyFunc.Bekle(2);
 
+            WebElement ilBox = driver.findElement(By.cssSelector("#locpr"));
+            Select locationDropBox = new Select(ilBox);
+            locationDropBox.selectByVisibleText("İstanbul - Avrupa");
+            MyFunc.Bekle(2);
+
             WebElement dropBoxDay = driver.findElement(By.cssSelector("#bd"));
             Select dropBox = new Select(dropBoxDay);
             dropBox.selectByVisibleText("1");

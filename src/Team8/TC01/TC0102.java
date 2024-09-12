@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.Select;
 import static Utility.BaseDriver.BekleKapat;
 import static Utility.BaseDriver.driver;
 
-public class TC0102 {
+public class TC0102 extends BaseDriver {
     @Test
-    public void NegativeTest() {
+    public void NegativeTest () {
         driver.navigate().to("https://www.akakce.com/");
         driver.manage().window().maximize();
         MyFunc.Bekle(2);

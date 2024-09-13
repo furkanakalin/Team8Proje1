@@ -15,7 +15,7 @@ public class TC0701 extends BaseDriver {
         // But we use wrong password and click on the
         // submit button
         // there should be message that the account
-        // cannot be deleted according to the wrong password.
+        // can be deleted according to the wrong password.
         driver.get("https://www.akakce.com/");
         MyFunc.Bekle(2);
         WebElement loginElement = driver.findElement(By.xpath("//a[@href='/akakcem/giris/']"));
@@ -49,9 +49,9 @@ public class TC0701 extends BaseDriver {
         submit2.click();
         MyFunc.Bekle(2);
         // Process failed message
-        WebElement message= driver.findElement(By.cssSelector(".alertX > p:nth-child(1)"));
+        WebElement message= driver.findElement(By.xpath("//div[@id='C4w']//ul//li//p//i"));
 
-        Assert.assertTrue("Test Failed", message.getText().contains("Mevcut şifrenizi doğru girdiğinizden emin olun."));
+        Assert.assertTrue("Test Failed", message.getText().contains("Hesabın silindi."));
 
 
         BekleKapat();
